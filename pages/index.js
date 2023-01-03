@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.css'
 
 import { Layout } from '../components/Layout'
-import { Tense } from '../components/Tense'
+import { TenseCard } from '../components/Tense/TenseCard'
 export default function Index({ tenses }) {
   return (
     <Layout>
@@ -9,7 +9,7 @@ export default function Index({ tenses }) {
         {tenses &&
           tenses.map((tense, index) => (
             <div className="d-flex col">
-              <Tense title={tense.title} key={index}/>
+              <TenseCard tense={tense} key={index} />
             </div>
           ))}
       </div>
